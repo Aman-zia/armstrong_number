@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task8.css">
+    <title>Document</title>
+
+   
+</head>
+<body>
+    <marquee><h1>ARMSTRONG NUMBER PROGRAMME</h1></marquee>
+    <div class="box">
+        <input type=text  id="arm" placeholder="enter the number">
+        <br/>
+        <button type="button" onclick="armstg()" >submit</button>
+
+    </div>
+    
+</body>
+<script>
+
+var number;
+var temp;
+var a;
+arm=0;
+        function armstg()
+        {
+            number=document.getElementById("arm").value;
+            temp=number;
+             while(temp>0)
+                 {
+                     a=temp%10;
+                     temp=parseInt(temp/10);
+                     arm=arm+a*a*a;
+                 }
+                 
+               
+             if(arm==number)
+             {
+                 document.write("the number is armstrong");
+             }
+             else
+             {
+                  document.write("the number is not armstrong");
+             }
+
+        }
+
+
+
+    </script>
+</html>
